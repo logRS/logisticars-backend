@@ -12,7 +12,6 @@ const app = createServer();
 
 AppDataSource.initialize()
     .then(() => {
-        app.listen({ })
         app.listen({ host, port }, () => {
             console.info(`⚡️ Server is running at http://${host}:${port}`);
         });

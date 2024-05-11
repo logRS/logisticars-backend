@@ -8,6 +8,8 @@ import session from './session';
 import { errorHandler } from '../middlewares/errorHandler';
 import passport from './passport';
 import apiRoutes from '../routes/api';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from '../../swagger.json';
 
 const createServer = () => {
     const app = express();
@@ -31,6 +33,7 @@ const createServer = () => {
     app.use(passport.session());
 
     app.use(`/${process.env.API_ROUTES_PREFIX}`, apiRoutes);
+    app.use(`/${process.env.API_ROUTES_PREFIX}/docs`, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
     app.get('/*', (req, res) => {
         throw createHttpError(404, 'Resource Not Found');
     });
