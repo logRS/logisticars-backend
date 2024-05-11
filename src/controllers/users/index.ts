@@ -6,6 +6,7 @@ import { User } from '../../entities/user';
 import type { UsersCreateBody } from '../../types/routes/users';
 import { validateCreateBody } from './validators';
 
+// TODO: Migrar tudo isso para o USUARIOS
 const create = async (req: TypedRequestBody<UsersCreateBody>, res: Response) => {
     const { username, email, password } = validateCreateBody(req.body);
 
