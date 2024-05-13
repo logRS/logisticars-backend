@@ -1,10 +1,17 @@
-import { Router } from 'express';
-import rescue from 'express-rescue';
-import userController from '../controllers/user.controller.js';
-import authMiddleware from '../middlewares/auth.js';
+import { Router } from "express";
+import rescue from "express-rescue";
+import usuarioController from "../controllers/user.controller.js";
+import authMiddleware from "../middlewares/auth.js";
+import userValidation from "./user.validation.js";
 
-const userRouter = Router();
+const usuarioRouter = Router();
 
-userRouter.route('/:id').get(authMiddleware, rescue(userController.getById));
+usuarioRouter
+  .route("/:id")
+  .get(
+    userValidation.getById,
+    authMiddleware,
+    rescue(usuarioController.getById),
+  );
 
-export default userRouter;
+export default usuarioRouter;
