@@ -13,7 +13,7 @@ export default {
     }),
   }),
 
-  edit: celebrate({
+  update: celebrate({
     [Segments.PARAMS]: Joi.object().keys({
       id: Joi.string().uuid().required(),
     }),
@@ -25,6 +25,11 @@ export default {
     [Segments.QUERY]: Joi.object().keys({
       page: Joi.number().integer().min(1),
       limit: Joi.number().integer().min(1),
+    }),
+  }),
+  delete: celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+      id: Joi.string().uuid().required(),
     }),
   }),
 };

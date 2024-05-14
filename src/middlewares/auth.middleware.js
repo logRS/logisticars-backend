@@ -2,7 +2,8 @@ import { StatusCodes } from "http-status-codes";
 import jwt from "../utils/jwt.js";
 
 export default (req, res, next) => {
-  const token = req.headers.authorization;
+  // Bearer xxxx
+  const token = req.headers.authorization?.split(" ")[1];
 
   if (!token)
     return next({
@@ -13,6 +14,7 @@ export default (req, res, next) => {
   try {
     const data = jwt.verify(token);
     res.locals.payload = data;
+    res.caller = [data?.id_usuario, res.id_request];
     return next();
   } catch (_err) {
     return next({ status: StatusCodes.UNAUTHORIZED, message: "Unauthorized" });

@@ -1,18 +1,17 @@
 import { Router } from "express";
 import rescue from "express-rescue";
-import categoriaController from "../controllers/categoria.controller.js";
-import authMiddleware from "../middlewares/auth.js";
+import categoriaController from "../categoria/categoria.controller.js";
+import authMiddleware from "../../middlewares/auth.middleware.js";
 import categoriaValidation from "./categoria.validation.js";
 
 const categoriaRouter = Router();
-
 
 categoriaRouter
   .route("/")
   .post(
     categoriaValidation.addNew,
     authMiddleware,
-    rescue(categoriaController.addNew),
+    rescue(categoriaController.create)
   );
 
 categoriaRouter
@@ -20,15 +19,15 @@ categoriaRouter
   .get(
     categoriaValidation.getById,
     authMiddleware,
-    rescue(categoriaController.getById),
+    rescue(categoriaController.getById)
   );
 
 categoriaRouter
   .route("/:id")
   .put(
-    categoriaValidation.edit,
+    categoriaValidation.update,
     authMiddleware,
-    rescue(categoriaController.edit),
+    rescue(categoriaController.update)
   );
 
 categoriaRouter
@@ -36,8 +35,14 @@ categoriaRouter
   .get(
     categoriaValidation.list,
     authMiddleware,
-    rescue(categoriaController.list),
+    rescue(categoriaController.list)
   );
 
-
+categoriaRouter
+  .route("/:id")
+  .delete(
+    categoriaValidation.delete,
+    authMiddleware,
+    rescue(categoriaController.delete)
+  );
 export default categoriaRouter;

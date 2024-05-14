@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import { StatusCodes } from "http-status-codes";
-import prisma from "../lib/prisma.js";
-import jwt from "../utils/jwt.js";
+import prisma from "../../lib/prisma.js";
+import jwt from "../../utils/jwt.js";
 /* eslint-disable camelcase */
 
 class AuthController {
@@ -44,19 +44,10 @@ class AuthController {
     }
 
     const hashedPassword = await bcrypt.hash(senha, 10);
-
-    try {
-      const { id_usuario } = await prisma.usuario.create({
-        data: { email, senha: hashedPassword, nome, tipo_usuario },
-      });
-      return res.status(StatusCodes.CREATED).send({ id_usuario });
-    } catch (err) {
-      console.log(err);
-      return next({
-        status: StatusCodes.INTERNAL_SERVER_ERROR,
-        message: "Erro ao criar usuário",
-      });
-    }
+    const { id_usuario } = await prisma.usuario.create({
+      data: { email, senha: hashedPassword, nome, tipo_usuario },
+    });
+    return res.status(StatusCodes.CREATED).send({ id_usuario });
   }
 }
 
