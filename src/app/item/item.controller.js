@@ -71,6 +71,8 @@ class ItemController {
     }
     return res.status(StatusCodes.OK).json(item);
   }
+
+  
 }
 
 async function findItem(id_item) {

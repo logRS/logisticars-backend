@@ -77,6 +77,30 @@ class CategoriaController {
     }
     return res.status(StatusCodes.OK).json(categoria);
   }
+
+  async delete(req, res, next) {
+    logger
+      .child({
+        caller: res.caller,
+      })
+      .info("CategoriaController > delete() | Deleting category by id");
+    const categoria = await prisma.categorias.findUnique({
+      where: { id_categoria: req.params.id },
+    });
+    if (!categoria) {
+      logger.warn("CategoriaController > delete() | Category not found");
+      return next({
+        status: StatusCodes.NOT_FOUND,
+        message: "Categoria não encontrada",
+      });
+    }
+    await prisma.categorias.delete({
+      where: {
+        id_categoria: req.params.id,
+      },
+    });
+    return res.status(StatusCodes.OK).json(categoria);
+  }
 }
 
 export default new CategoriaController();

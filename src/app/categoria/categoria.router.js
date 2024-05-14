@@ -38,4 +38,11 @@ categoriaRouter
     rescue(categoriaController.list)
   );
 
+categoriaRouter
+  .route("/:id")
+  .delete(
+    categoriaValidation.delete,
+    authMiddleware,
+    rescue(categoriaController.delete)
+  );
 export default categoriaRouter;
