@@ -2,12 +2,14 @@
   "name": "express-prisma-jwt-auth",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/api/server.js",
   "type": "module",
   "scripts": {
     "dev": "npx nodemon src/api/server.js",
     "lint": "eslint . --ext .js",
-    "lint:fix": "eslint . --ext .js --fix"
+    "lint:fix": "eslint . --ext .js --fix",
+    "build": "babel src --out-dir dist",
+    "start": "node dist/api/server.js"
   },
   "prisma": {
     "seed": "node prisma/seed.ts"
@@ -16,6 +18,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/eslint-parser": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-node": "^4.1.0",

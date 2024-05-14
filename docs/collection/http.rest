@@ -59,16 +59,29 @@ Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoi
     "id_categoria":"400dcd82-6492-4633-9041-835fd9a99f22"
 }
 
-### Atualizar Item Completamente NÃO IMPLEMENTADO AINDA
-PUT  http://localhost:8000/itens/22d97421-eef2-4ea8-92f4-022d3ae3fbac HTTP/1.1
+### Atualizar Item Completamente
+PUT  http://localhost:8000/itens/b817a3f8-8433-44ff-887b-83f6fa3b13a7 HTTP/1.1
 Content-Type: application/json
 Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
 
 {
-    "nome":"AIDS",
+    "nome":"222",
     "unidade_medida":"un",
     "id_categoria":"400dcd82-6492-4633-9041-835fd9a99f22"
 }
+
+### Buscar Item por ID
+GET http://localhost:8000/itens/b817a3f8-8433-44ff-887b-83f6fa3b13a7 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+### Listar Itens
+GET http://localhost:8000/itens/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+### Deletar Itens
+DELETE http://localhost:8000/itens/b817a3f8-8433-44ff-887b-83f6fa3b13a7 HTTP/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
 
 
 ## Categorias

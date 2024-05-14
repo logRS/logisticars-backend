@@ -1,4 +1,4 @@
-import bcrypt from "bcryptjs";
+import bcrypt from 'bcryptjs';
 
 export const encryptPassword = (password) => bcrypt.hash(password, 10);
 
