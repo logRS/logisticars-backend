@@ -6,7 +6,7 @@ import categoriaValidation from './categoria.validation.js';
 
 const categoriaRouter = Router();
 
-categoriaRouter.route('/').post(categoriaValidation.addNew, authMiddleware, rescue(categoriaController.create));
+categoriaRouter.route('/').post(categoriaValidation.create, authMiddleware, rescue(categoriaController.create));
 
 categoriaRouter.route('/:id').get(categoriaValidation.getById, authMiddleware, rescue(categoriaController.getById));
 

@@ -50,8 +50,8 @@ model demanda {
   ponto_entrega                                                                      ponto_entrega?           @relation(fields: [id_ponto_entrega], references: [id_ponto_entrega], onDelete: NoAction, onUpdate: NoAction)
   entrega_demanda                                                                    entrega_demanda[]
   ordem_de_compra                                                                    ordem_de_compra[]
-  ordem_de_transferencia_ordem_de_transferencia_id_demandaTodemanda                  ordem_de_transferencia[] @relation("ordem_de_transferencia_id_demandaTodemanda")
   ordem_de_transferencia_ordem_de_transferencia_id_demanda_de_transferenciaTodemanda ordem_de_transferencia[] @relation("ordem_de_transferencia_id_demanda_de_transferenciaTodemanda")
+  ordem_de_transferencia_ordem_de_transferencia_id_demandaTodemanda                  ordem_de_transferencia[] @relation("ordem_de_transferencia_id_demandaTodemanda")
 }
 
 model entrega_demanda {
@@ -75,8 +75,8 @@ model item {
   created_at      DateTime?         @db.Date
   updated_at      DateTime?         @db.Date
   id_categoria    String?           @db.Uuid
-  categorias      categorias?       @relation(fields: [id_categoria], references: [id_categoria], onDelete: NoAction, onUpdate: NoAction)
   demanda         demanda[]
+  categorias      categorias?       @relation(fields: [id_categoria], references: [id_categoria], onDelete: NoAction, onUpdate: NoAction)
   item_estoque    item_estoque[]
   ordem_de_compra ordem_de_compra[]
 }
@@ -100,8 +100,8 @@ model localizacao_estoque {
   id_localizacao String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   id_estoque     String?        @db.Uuid
   nome           String?        @db.VarChar(255)
-  cd             cd?            @relation(fields: [id_estoque], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
   item_estoque   item_estoque[]
+  cd             cd?            @relation(fields: [id_estoque], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model migrations {
@@ -133,8 +133,8 @@ model ordem_de_transferencia {
   updated_at                                                          DateTime? @db.Date
   cd_ordem_de_transferencia_cd_destinoTocd                            cd?       @relation("ordem_de_transferencia_cd_destinoTocd", fields: [cd_destino], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
   cd_ordem_de_transferencia_cd_origemTocd                             cd?       @relation("ordem_de_transferencia_cd_origemTocd", fields: [cd_origem], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
-  demanda_ordem_de_transferencia_id_demandaTodemanda                  demanda?  @relation("ordem_de_transferencia_id_demandaTodemanda", fields: [id_demanda], references: [id_demanda], onDelete: NoAction, onUpdate: NoAction)
   demanda_ordem_de_transferencia_id_demanda_de_transferenciaTodemanda demanda?  @relation("ordem_de_transferencia_id_demanda_de_transferenciaTodemanda", fields: [id_demanda_de_transferencia], references: [id_demanda], onDelete: NoAction, onUpdate: NoAction)
+  demanda_ordem_de_transferencia_id_demandaTodemanda                  demanda?  @relation("ordem_de_transferencia_id_demandaTodemanda", fields: [id_demanda], references: [id_demanda], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model origem {
@@ -156,11 +156,12 @@ model pacote {
 
 model ponto_entrega {
   id_ponto_entrega String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  endereco         String?   @db.VarChar(255)
+  endereco         String    @db.VarChar(255)
   responsavel      String?   @db.VarChar(255)
   telefone         String?   @db.VarChar(255)
   created_at       DateTime? @db.Date
   updated_at       DateTime? @db.Date
+  nome             String    @db.VarChar(255)
   demanda          demanda[]
   pacote           pacote[]
 }
@@ -172,10 +173,10 @@ model usuario {
   email                   String?           @unique @db.VarChar(255)
   senha                   String?           @db.VarChar(255)
   id_cd                   String?           @db.Uuid
-  cd_usuario_id_cdTocd    cd?               @relation("usuario_id_cdTocd", fields: [id_cd], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
   cd_cd_id_adminTousuario cd[]              @relation("cd_id_adminTousuario")
   demanda                 demanda[]
   entrega_demanda         entrega_demanda[]
+  cd_usuario_id_cdTocd    cd?               @relation("usuario_id_cdTocd", fields: [id_cd], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
   usuario_cd              usuario_cd[]
 }
 
