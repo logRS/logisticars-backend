@@ -32,6 +32,7 @@ const options = {
   apis: ["./src/routers/*.js", "./src/api/routes.js"],
 };
 
+
 const specs = swaggerJsdoc(options);
 app.use(
   "/api-docs",

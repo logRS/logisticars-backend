@@ -27,4 +27,9 @@ export default {
       limit: Joi.number().integer().min(1),
     }),
   }),
+  delete: celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+      id: Joi.string().uuid().required(),
+    }),
+  }),
 };

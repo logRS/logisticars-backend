@@ -1,8 +1,9 @@
 import bcrypt from "bcryptjs";
 import { StatusCodes } from "http-status-codes";
-import prisma from "../lib/prisma.js";
-import jwt from "../utils/jwt.js";
+import prisma from "../../lib/prisma.js";
+import jwt from "../../utils/jwt.js";
 /* eslint-disable camelcase */
+
 
 class AuthController {
   async authenticate(req, res, next) {

@@ -1,0 +1,66 @@
+## Auth
+### Registrar Usuário
+POST http://localhost:8000/auth/registrar HTTP/1.1
+Content-Type: application/json
+
+{
+	"email":"benjamin@dorak.com.br",
+    "nome":"123456789",
+    "tipo_usuario":"admin",
+	"senha":"benjamin"
+}
+
+### Login
+POST http://localhost:8000/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "benjamin@dorak.com.br",
+    "senha": "123456789"
+}
+
+## Usuários
+### Buscar Usuário
+GET http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6037 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+## Itens
+### Cadastrar Itens
+POST http://localhost:8000/itens/ HTTP/1.1
+Content-Type: application/json
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+{
+    "nome":"COVID",
+    "unidade_medida":"un",
+    "id_categoria":"400dcd82-6492-4633-9041-835fd9a99f22"
+}
+
+### Atualizar Item Completamente NÃO IMPLEMENTADO AINDA
+PUT  http://localhost:8000/itens/22d97421-eef2-4ea8-92f4-022d3ae3fbac HTTP/1.1
+Content-Type: application/json
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+{
+    "nome":"AIDS",
+    "unidade_medida":"un",
+    "id_categoria":"400dcd82-6492-4633-9041-835fd9a99f22"
+}
+
+
+## Categorias
+### Cadastrar Categorias
+POST http://localhost:8000/categorias/
+Content-Type: application/json
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+{
+    "nome":"Vacina"
+}
+
+### Listar Categorias
+GET http://localhost:8000/categorias/
+Content-Type: application/json
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+

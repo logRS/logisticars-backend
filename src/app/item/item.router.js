@@ -1,7 +1,7 @@
 import { Router } from "express";
 import rescue from "express-rescue";
-import itemController from "../controllers/item.controller.js";
-import authMiddleware from "../middlewares/auth.js";
+import itemController from "../item/item.controller.js";
+import authMiddleware from "../../middlewares/auth.middleware.js";
 import itemValidation from "./item.validation.js";
 
 const itemRouter = Router();

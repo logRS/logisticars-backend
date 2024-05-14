@@ -1,7 +1,7 @@
 import { Router } from "express";
 import rescue from "express-rescue";
-import categoriaController from "../controllers/categoria.controller.js";
-import authMiddleware from "../middlewares/auth.js";
+import categoriaController from "../categoria/categoria.controller.js";
+import authMiddleware from "../../middlewares/auth.middleware.js";
 import categoriaValidation from "./categoria.validation.js";
 
 const categoriaRouter = Router();

@@ -1,5 +1,5 @@
 import { StatusCodes } from "http-status-codes";
-import prisma from "../lib/prisma.js";
+import prisma from "../../lib/prisma.js";
 
 class CategoriaController {
 

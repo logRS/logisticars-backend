@@ -1,12 +1,12 @@
 import { Router } from "express";
-import authRouter from "../routers/auth.router.js";
-import userRouter from "../routers/user.router.js";
-import itemRouter from "../routers/item.router.js";
-import categoriaRouter from "../routers/categoria.router.js";
+import authRouter from "../app/auth/auth.router.js";
+import userRouter from "../app/usuario/usuario.router.js";
+import itemRouter from "../app/item/item.router.js";
+import categoriaRouter from "../app/categoria/categoria.router.js";
 
 const router = Router();
 
-router.use("/users", userRouter);
+router.use("/usuarios", userRouter);
 router.use("/auth", authRouter);
 router.use("/itens", itemRouter);
 router.use("/categorias", categoriaRouter);

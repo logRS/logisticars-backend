@@ -1,6 +1,7 @@
 import { StatusCodes } from "http-status-codes";
-import prisma from "../lib/prisma.js";
+import prisma from "../../lib/prisma.js";
 
+// TODO: Created_at and updated_at must be timestamp auto-generated
 class ItemController {
   async getById(req, res, next) {
     console.log("Caller", res.locals.payload); // just to see the payload
@@ -26,20 +27,42 @@ class ItemController {
     }
   }
 
-  async addNew(req, res, next) {
 
+ 
 
-    // checking if the category exists
-    try{
-      const category = await prisma.categorias.findFirst({
-        where: { id_categoria: req.body.id_categoria },
+  // edit item
+  async editItem(req, res, next) {
+    try {
+      const item = await prisma.item.update({
+        where: { id_item: req.params.id },
+        data: { nome: req.body.nome, unidade_medida: req.body.unidade_medida, id_categoria: req.body.id_categoria },
       });
-      if (!category)
+      if (!item)
+        return next({
+          status: StatusCodes.NOT_FOUND,
+          message: "Item não encontrado",
+        });
+      return res
+        .status(StatusCodes.OK)
+        .json(item);
+    } catch (err) {
+      console.error(err);
+      return next({
+        status: StatusCodes.INTERNAL_SERVER_ERROR,
+        message: "Internal server error",
+      });
+    }
+  }
+  addNew = async (req, res, next) => {
+    const categoriaExistente = await verificaCategoriaExistente(req.body.id_categoria);
+    try{
+      if(!categoriaExistente){
         return next({
           status: StatusCodes.NOT_FOUND,
           message: "Categoria não encontrada",
         });
-    } catch (err) {
+      }
+    }catch(err){
       console.error(err);
       return next({
         status: StatusCodes.INTERNAL_SERVER_ERROR,
@@ -69,10 +92,13 @@ class ItemController {
     }
   }
 
-
-
-
-
 }
+
+async function verificaCategoriaExistente(id_categoria) {
+  // checking if the category exists
+  return await prisma.categorias.findFirst({
+     where: { id_categoria },
+   }); 
+ }
 
 export default new ItemController();
