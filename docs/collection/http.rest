@@ -21,8 +21,31 @@ Content-Type: application/json
 
 ## Usuários
 ### Buscar Usuário
-GET http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6037 HTTP/1.1
+GET http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6031 HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+### Listar Usuários
+GET http://localhost:8000/usuarios/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+### Atualizar Usuário
+PUT http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6031 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+{
+    "email":"",
+    "nome":"Benjamin",
+    "tipo_usuario":"admin",
+    "senha":"benjamin"
+}
+
+
+### Deletar Usuário
+DELETE http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6031 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+
 
 ## Itens
 ### Cadastrar Itens

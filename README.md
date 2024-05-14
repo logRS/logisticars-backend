@@ -22,6 +22,8 @@ pnpm i
 
 npx prisma db push
 
+npx prisma generate
+
 pnpm dev
 
 ```

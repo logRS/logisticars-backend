@@ -3,24 +3,25 @@ import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUiExpress from "swagger-ui-express";
 import errorMiddleware from "../middlewares/error.js";
 import routes from "./routes.js";
+import traceRequestsMiddleware from "../middlewares/traceRequests.middleware.js";
 
 const app = express();
 const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "LogRocket Express API with Swagger",
+      title: "LogisticaRS Api with Swagger",
       version: "0.1.0",
       description:
-        "This is a simple CRUD API application made with Express and documented with Swagger",
+        "This is a application made with Express and documented with Swagger",
       license: {
         name: "MIT",
         url: "https://spdx.org/licenses/MIT.html",
       },
       contact: {
-        name: "LogRocket",
-        url: "https://logrocket.com",
-        email: "info@email.com",
+        name: "Juninho Freitas",
+        url: "https://juninho.dev",
+        email: "brizollajr@gmail.com",
       },
     },
     servers: [
@@ -44,6 +45,6 @@ app.use(
   }),
 );
 
-app.use(express.json()).use(routes).use(errorMiddleware);
+app.use(express.json()).use(traceRequestsMiddleware).use(routes).use(errorMiddleware);
 
 export default app;

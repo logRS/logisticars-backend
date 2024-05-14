@@ -12,7 +12,12 @@ usuarioRouter
     userValidation.getById,
     authMiddleware,
     rescue(usuarioController.getById),
-  );
+  )
+
+usuarioRouter.route('/').get(
+  authMiddleware,
+  rescue(usuarioController.getAll),
+)
 
 usuarioRouter
   .route("/:id")

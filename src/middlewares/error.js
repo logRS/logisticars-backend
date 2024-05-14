@@ -1,8 +1,11 @@
 import { isCelebrateError } from "celebrate";
 import { StatusCodes } from "http-status-codes";
+import logger from "../lib/logger.js";
 
 export default (err, _req, res, _next) => {
-  if (err.status) return res.status(err.status).json({ message: err.message });
+  if (err.status) {
+    return res.status(err.status).json({ message: err.message });
+  }
   if (isCelebrateError(err)) {
     return res.status(400).json({
       error: "Bad Request",
@@ -16,6 +19,7 @@ export default (err, _req, res, _next) => {
         })),
     });
   }
+  logger.child({id: res?.locals?.payload?.id_usuario}).error(err)
   return res
     .status(StatusCodes.INTERNAL_SERVER_ERROR)
     .json({ message: "Internal server error" });
