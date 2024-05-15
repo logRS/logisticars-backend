@@ -195,3 +195,44 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiN
 DELETE http://localhost:8000/pontos-de-entrega/40dd6a0a-efe5-441f-94e8-eb622fd21042
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+## CD
+### Cadastrar CD
+POST http://localhost:8000/cds/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+{
+    "descricao": "CD Caxias",
+    "endereco":"R das Flores 455, Caxias",
+    "nome":"CD Caxias",
+    "capacidade_armazenamento":"1000"
+}
+
+### Listar CD
+GET http://localhost:8000/cds/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+### Buscar CD por ID
+GET http://localhost:8000/cds/c8e2d6f3-3dbc-40fc-9ab4-aa0c1ceb8dbc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+
+### Atualizar CD
+PUT http://localhost:8000/cds/c8e2d6f3-3dbc-40fc-9ab4-aa0c1ceb8dbc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+    
+{
+    "descricao": "CD Caxias 2",
+    "endereco":"R das Flores 455, Caxias",
+    "nome":"CD Caxias",
+    "capacidade_armazenamento":"1000"
+}
+
+### Deletar CD
+DELETE http://localhost:8000/cds/c8e2d6f3-3dbc-40fc-9ab4-aa0c1ceb8dbc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+

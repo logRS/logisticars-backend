@@ -22,12 +22,10 @@ model categorias {
 
 model cd {
   id_cd                                                        String                   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  id_admin                                                     String?                  @db.Uuid
   descricao                                                    String?                  @db.VarChar(255)
   endereco                                                     String?                  @db.VarChar(255)
   nome                                                         String?                  @db.VarChar(255)
   capacidade_armazenamento                                     String?                  @db.VarChar(255)
-  usuario_cd_id_adminTousuario                                 usuario?                 @relation("cd_id_adminTousuario", fields: [id_admin], references: [id_usuario], onDelete: NoAction, onUpdate: NoAction)
   item_estoque                                                 item_estoque[]
   localizacao_estoque                                          localizacao_estoque[]
   ordem_de_transferencia_ordem_de_transferencia_cd_destinoTocd ordem_de_transferencia[] @relation("ordem_de_transferencia_cd_destinoTocd")
@@ -98,10 +96,10 @@ model item_estoque {
 
 model localizacao_estoque {
   id_localizacao String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  id_estoque     String?        @db.Uuid
+  id_cd          String?        @db.Uuid
   nome           String?        @db.VarChar(255)
   item_estoque   item_estoque[]
-  cd             cd?            @relation(fields: [id_estoque], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
+  cd             cd?            @relation(fields: [id_cd], references: [id_cd], onDelete: NoAction, onUpdate: NoAction, map: "localizacao_estoque_id_estoque_fkey")
 }
 
 model migrations {
@@ -167,17 +165,16 @@ model ponto_entrega {
 }
 
 model usuario {
-  id_usuario              String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  tipo_usuario            String?           @db.VarChar(255)
-  nome                    String?           @db.VarChar(255)
-  email                   String?           @unique @db.VarChar(255)
-  senha                   String?           @db.VarChar(255)
-  id_cd                   String?           @db.Uuid
-  cd_cd_id_adminTousuario cd[]              @relation("cd_id_adminTousuario")
-  demanda                 demanda[]
-  entrega_demanda         entrega_demanda[]
-  cd_usuario_id_cdTocd    cd?               @relation("usuario_id_cdTocd", fields: [id_cd], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
-  usuario_cd              usuario_cd[]
+  id_usuario           String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tipo_usuario         String?           @db.VarChar(255)
+  nome                 String?           @db.VarChar(255)
+  email                String?           @unique @db.VarChar(255)
+  senha                String?           @db.VarChar(255)
+  id_cd                String?           @db.Uuid
+  demanda              demanda[]
+  entrega_demanda      entrega_demanda[]
+  cd_usuario_id_cdTocd cd?               @relation("usuario_id_cdTocd", fields: [id_cd], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
+  usuario_cd           usuario_cd[]
 }
 
 model usuario_cd {

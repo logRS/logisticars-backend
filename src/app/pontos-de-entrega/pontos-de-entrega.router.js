@@ -18,22 +18,3 @@ pontosDeEntregaRouter.route('/:id').put(pontosDeEntregaValidation.update, authMi
 pontosDeEntregaRouter.route('/:id').delete(pontosDeEntregaValidation.delete, authMiddleware, rescue(pontosDeEntregaController.delete));
 
 export default pontosDeEntregaRouter;
-
-
-
-// import origemController from './pontos-de-entrega.controller.js';
-// import origemValidation from './pontos-de-entrega.validation.js';
-
-// const origemRouter = Router();
-
-// origemRouter.route('/:id').get(origemValidation.getById, authMiddleware, rescue(origemController.getById));
-
-// origemRouter.route('/').post(origemValidation.create, authMiddleware, rescue(origemController.create));
-
-// origemRouter.route('/').get(origemValidation.list, authMiddleware, rescue(origemController.list));
-
-// origemRouter.route('/:id').put(origemValidation.update, authMiddleware, rescue(origemController.update));
-
-// origemRouter.route('/:id').delete(origemValidation.delete, authMiddleware, rescue(origemController.delete));
-
-// export default origemRouter;
