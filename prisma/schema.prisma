@@ -82,16 +82,16 @@ model item {
 model item_estoque {
   id_item_estoque     String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   id_item             String?              @db.Uuid
-  tipo_operacao       String?              @db.VarChar(255)
   id_localizacao      String?              @db.Uuid
   quantidade          Int?
   id_estoque          String?              @db.Uuid
-  validade            DateTime?            @db.Time(6)
   id_origem           String?              @db.Uuid
+  validade            DateTime?            @db.Timestamptz(6)
   cd                  cd?                  @relation(fields: [id_estoque], references: [id_cd], onDelete: NoAction, onUpdate: NoAction)
   item                item?                @relation(fields: [id_item], references: [id_item], onDelete: NoAction, onUpdate: NoAction)
   localizacao_estoque localizacao_estoque? @relation(fields: [id_localizacao], references: [id_localizacao], onDelete: NoAction, onUpdate: NoAction)
   origem              origem?              @relation(fields: [id_origem], references: [id_origem], onDelete: NoAction, onUpdate: NoAction)
+  registro_estoque    registro_estoque[]
 }
 
 model localizacao_estoque {
@@ -193,4 +193,12 @@ model viagem {
   updated_at       DateTime?         @db.Date
   entrega_demanda  entrega_demanda[]
   pacote           pacote[]
+}
+
+model registro_estoque {
+  id_item_estoque     String       @db.Uuid
+  id_registro_estoque String       @id(map: "registro_estoque_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  operacao            String       @db.VarChar(1)
+  quantidade          Float?       @db.Real
+  item_estoque        item_estoque @relation(fields: [id_item_estoque], references: [id_item_estoque], onDelete: NoAction, onUpdate: NoAction, map: "registro_estoque_item_estoque_fk")
 }

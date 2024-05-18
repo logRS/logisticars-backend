@@ -79,11 +79,7 @@ class CategoriaController {
   }
 
   async delete(req, res, next) {
-    logger
-      .child({
-        caller: res.caller,
-      })
-      .info('CategoriaController > delete() | Deleting category by id');
+    logger.child({ caller: res.caller }).info('CategoriaController > delete() | Deleting category by id');
     const categoria = await prisma.categorias.findUnique({
       where: { id_categoria: req.params.id },
     });
