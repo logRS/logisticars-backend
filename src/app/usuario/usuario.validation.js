@@ -1,4 +1,4 @@
-import { Joi, Segments, celebrate } from "celebrate";
+import { Joi, Segments, celebrate } from 'celebrate';
 
 export default {
   getById: celebrate({

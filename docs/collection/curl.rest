@@ -1,0 +1,114 @@
+## Auth
+### Registrar Usuário
+curl --request POST --url http://localhost:8000/auth/registrar \--header "Content-Type: application/json" \--data '{"email": "benjamindorak.com.br","nome": "123456789","tipo_usuario": "admin","senha": "benjamin"}'
+
+### Login
+curl --request POST --url http://localhost:8000/auth/login \--header "Content-Type: application/json" \--data '{"email": "benjamin@dorak.com.br","senha": "123456789"}'
+
+## Usuários
+### Buscar Usuário
+curl --request GET --url http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6031 \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Listar Usuários
+curl --request GET --url http://localhost:8000/usuarios/ \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Atualizar Usuário
+curl --request PUT --url http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6031 \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"email":"","nome":"Benjamin","tipo_usuario":"admin","senha":"benjamin"}'
+
+### Deletar Usuário
+curl --request DELETE --url http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6031 \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+## Itens
+### Cadastrar Itens
+curl --request POST --url http://localhost:8000/itens/ \--header "Content-Type: application/json" \--header "Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"nome":"Uva","unidade_medida":"cx","id_categoria":"496a37bf-b533-48ff-b132-17927c8f6022"}'
+
+### Atualizar Item Completamente
+curl --request PUT --url http://localhost:8000/itens/b817a3f8-8433-44ff-887b-83f6fa3b13a7 \--header "Content-Type: application/json" \--header "Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"nome":"222","unidade_medida":"un","id_categoria":"400dcd82-6492-4633-9041-835fd9a99f22"}'
+
+### Buscar Item por ID
+curl --request GET --url http://localhost:8000/itens/b817a3f8-8433-44ff-887b-83f6fa3b13a7 \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Listar Itens
+curl --request GET --url http://localhost:8000/itens/ \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Deletar Itens
+curl --request DELETE --url http://localhost:8000/itens/b817a3f8-8433-44ff-887b-83f6fa3b13a7 \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+## Categorias
+### Cadastrar Categorias
+curl --request POST --url http://localhost:8000/categorias/ \--header "Content-Type: application/json" \--header "Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"nome":"Alimentos"}'
+
+### Listar Categorias
+curl --request GET --url http://localhost:8000/categorias/ \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Buscar Categoria por ID
+curl --request GET --url http://localhost:8000/categorias/d3ad7e13-f6c8-4b1c-b356-8d15f93b18ce \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Atualizar Categoria
+curl --request PUT --url http://localhost:8000/categorias/78630ee--datac44-45b1-b4d5-e6ef0d189c08 \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"nome":"Alimentos 2"}'
+
+### Deletar Categoria
+curl --request DELETE --url http://localhost:8000/categorias/78630ee--datac44-45b1-b4d5-e6ef0d189c08 \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+## Origem
+### Cadastrar Origem
+curl --request POST --url http://localhost:8000/origens/ \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"nome":"Benjamin","cpf_cnpj":"873.740.480-68","categoria":"admin"}'
+
+### Listar Origens
+curl --request GET --url http://localhost:8000/origens/ \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Buscar Origem por ID
+curl --request GET --url http://localhost:8000/origens/2bce1f0f-3683-4b49-8cb8-748812023763 \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Atualizar Origem
+curl --request PUT --url http://localhost:8000/origens/631f9f54-b8bb-4081-89bd-1fe5dfbd47b2 \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"nome":"Juninho","cpf_cnpj":"123456789","categoria":"admin"}'
+
+### Deletar Origem
+curl --request DELETE --url http://localhost:8000/origens/2bce1f0f-3683-4b49-8cb8-748812023763 \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+## Pontos de Entrega
+### Cadastrar Pontos de Entrega
+curl --request POST --url http://localhost:8000/ponto--datae-entrega/ \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"nome": "CD Caxias","endereco":"R das Flores 455, Caxias","responsavel":"Juninho","telefone":"51-999354299"}'
+
+### Listar Pontos de Entrega
+curl --request GET --url http://localhost:8000/ponto--datae-entrega/ \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Buscar Pontos de Entrega por ID
+curl --request GET --url http://localhost:8000/ponto--datae-entrega/40dd6a0a-efe5-441f-94e8-eb622fd21042 \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Atualizar Pontos de Entrega
+curl --request PUT --url http://localhost:8000/ponto--datae-entrega/40dd6a0a-efe5-441f-94e8-eb622fd21042 \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"nome": "Cd Caxias 2","endereco":"Juninho da Cunha","responsavel":"Benjamin","telefone":"51-999354299"}'
+
+### Deletar Pontos de Entrega
+curl --request DELETE --url http://localhost:8000/ponto--datae-entrega/40dd6a0a-efe5-441f-94e8-eb622fd21042 \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+## CD
+### Cadastrar CD
+curl --request POST --url http://localhost:8000/cds/ \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"descricao": "CD Caxias","endereco":"R das Flores 455, Caxias","nome":"CD Caxias","capacidade_armazenamento":"1000"}'
+### Listar CD
+curl --request GET --url http://localhost:8000/cds/ \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Buscar CD por ID
+curl --request GET --url http://localhost:8000/cds/c8e2d6f3-3dbc-40fc-9ab4-aa0c1ceb8dbc \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+### Atualizar CD
+curl --request PUT --url http://localhost:8000/cds/c8e2d6f3-3dbc-40fc-9ab4-aa0c1ceb8dbc \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" \--data '{"descricao": "CD Caxias 2","endereco":"R das Flores 455, Caxias","nome":"CD Caxias","capacidade_armazenamento":"1000"}'
+
+### Deletar CD
+curl --request DELETE --url http://localhost:8000/cds/c8e2d6f3-3dbc-40fc-9ab4-aa0c1ceb8dbc \--header "Content-Type: application/json" \--header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo"
+
+## Estoque
+### Cadastrar Item no Estoque
+curl -X POST http://localhost:8000/estoques/ \
+-H "Content-Type: application/json"\
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo" 
+
+{
+  "id_item":"d9d2ac6f-7b67-4884-8e6e-afc0a97d4710",
+  "id_cd":"951a56ce-f930-4a3e-b291-ed0894640164",
+  "id_origem":"e98aecb6-1637-4563-80e3-ba794fa6e8f1",
+  "id_localizacao":"40dd6a0a-efe5-441f-94e8-eb622fd21042",
+  "quantidade":100,
+  "tipo_operacao":"E",
+  "validade": "2021-03-01"
+}

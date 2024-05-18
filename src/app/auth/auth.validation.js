@@ -1,4 +1,4 @@
-import { Joi, Segments, celebrate } from "celebrate";
+import { Joi, Segments, celebrate } from 'celebrate';
 
 export default {
   login: celebrate({
@@ -12,9 +12,7 @@ export default {
       email: Joi.string().email().required(),
       senha: Joi.string().min(8).required(),
       nome: Joi.string().required(),
-      tipo_usuario: Joi.string()
-        .valid("admin", "gestor", "coordenador")
-        .required(),
+      tipo_usuario: Joi.string().valid('admin', 'gestor', 'coordenador').required(),
     }),
   }),
 };

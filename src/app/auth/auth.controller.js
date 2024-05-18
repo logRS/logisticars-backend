@@ -1,7 +1,7 @@
-import bcrypt from "bcryptjs";
-import { StatusCodes } from "http-status-codes";
-import prisma from "../../lib/prisma.js";
-import jwt from "../../utils/jwt.js";
+import bcrypt from 'bcryptjs';
+import { StatusCodes } from 'http-status-codes';
+import prisma from '../../lib/prisma.js';
+import jwt from '../../utils/jwt.js';
 /* eslint-disable camelcase */
 
 class AuthController {
@@ -13,7 +13,7 @@ class AuthController {
     if (!user) {
       return next({
         status: StatusCodes.NOT_FOUND,
-        message: "Usuário não encontrado",
+        message: 'Usuário não encontrado',
       });
     }
 
@@ -22,7 +22,7 @@ class AuthController {
     if (!isValidPassword) {
       return next({
         status: StatusCodes.UNAUTHORIZED,
-        message: "Senha inválida",
+        message: 'Senha inválida',
       });
     }
 
@@ -39,7 +39,7 @@ class AuthController {
     if (user) {
       return next({
         status: StatusCodes.CONFLICT,
-        message: "Email já cadastrado",
+        message: 'Email já cadastrado',
       });
     }
 

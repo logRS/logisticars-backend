@@ -22,16 +22,16 @@ Content-Type: application/json
 ## Usuários
 ### Buscar Usuário
 GET http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6031 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 ### Listar Usuários
 GET http://localhost:8000/usuarios/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 ### Atualizar Usuário
 PUT http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6031 HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 {
     "email":"",
@@ -43,7 +43,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiN
 
 ### Deletar Usuário
 DELETE http://localhost:8000/usuarios/73233eff-eb25-4be4-a42f-68723dee6031 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 
 
@@ -51,31 +51,44 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiN
 ### Cadastrar Itens
 POST http://localhost:8000/itens/ HTTP/1.1
 Content-Type: application/json
-Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 {
-    "nome":"COVID",
-    "unidade_medida":"un",
-    "id_categoria":"400dcd82-6492-4633-9041-835fd9a99f22"
+    "nome":"Uva",
+    "unidade_medida":"cx",
+    "id_categoria":"496a37bf-b533-48ff-b132-17927c8f6022"
 }
 
-### Atualizar Item Completamente NÃO IMPLEMENTADO AINDA
-PUT  http://localhost:8000/itens/22d97421-eef2-4ea8-92f4-022d3ae3fbac HTTP/1.1
+### Atualizar Item Completamente
+PUT  http://localhost:8000/itens/b817a3f8-8433-44ff-887b-83f6fa3b13a7 HTTP/1.1
 Content-Type: application/json
-Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 {
-    "nome":"AIDS",
+    "nome":"222",
     "unidade_medida":"un",
     "id_categoria":"400dcd82-6492-4633-9041-835fd9a99f22"
 }
+
+### Buscar Item por ID
+GET http://localhost:8000/itens/b817a3f8-8433-44ff-887b-83f6fa3b13a7 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+### Listar Itens
+GET http://localhost:8000/itens/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+### Deletar Itens
+DELETE http://localhost:8000/itens/b817a3f8-8433-44ff-887b-83f6fa3b13a7 HTTP/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
 
 
 ## Categorias
 ### Cadastrar Categorias
 POST http://localhost:8000/categorias/
 Content-Type: application/json
-Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 {
     "nome":"Alimentos"
@@ -84,17 +97,17 @@ Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoi
 ### Listar Categorias
 GET http://localhost:8000/categorias/
 Content-Type: application/json
-Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 ### Buscar Categoria por ID
 GET http://localhost:8000/categorias/78630ee1-dc44-45b1-b4d5-e6ef0d189c08
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 ### Atualizar Categoria
 PUT http://localhost:8000/categorias/78630ee1-dc44-45b1-b4d5-e6ef0d189c08
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 {
     "nome":"Alimentos 2"
@@ -103,6 +116,138 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiN
 ### Deletar Categoria
 DELETE http://localhost:8000/categorias/78630ee1-dc44-45b1-b4d5-e6ef0d189c08
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU2NTQzNDIsImV4cCI6MTcxNTc0MDc0Mn0.kdQ3UFuvJPrTLbgWYFyF5GlWqrDuubs2ejnpcUgrIGQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
 
 
+## Origem
+### Cadastrar Origem
+POST http://localhost:8000/origens/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+{
+    "nome":"Benjamin",
+    "cpf_cnpj":"873.740.480-68",
+    "categoria":"admin"
+}
+
+### Listar Origens
+GET http://localhost:8000/origens/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+### Buscar Origem por ID
+GET http://localhost:8000/origens/2bce1f0f-3683-4b49-8cb8-748812023763
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+### Atualizar Origem
+PUT http://localhost:8000/origens/631f9f54-b8bb-4081-89bd-1fe5dfbd47b2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+{
+    "nome":"Juninho",
+    "cpf_cnpj":"123456789",
+    "categoria":"admin"
+}
+
+### Deletar Origem
+DELETE http://localhost:8000/origens/2bce1f0f-3683-4b49-8cb8-748812023763
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+## Pontos de Entrega
+### Cadastrar Pontos de Entrega
+POST http://localhost:8000/pontos-de-entrega/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+{
+    "nome": "CD Caxias",
+    "endereco":"R das Flores 455, Caxias",
+    "responsavel":"Juninho",
+    "telefone":"51-999354299"
+}
+### Listar Pontos de Entrega
+GET http://localhost:8000/pontos-de-entrega/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+### Buscar Pontos de Entrega por ID
+GET http://localhost:8000/pontos-de-entrega/40dd6a0a-efe5-441f-94e8-eb622fd21042
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+### Atualizar Pontos de Entrega
+PUT http://localhost:8000/pontos-de-entrega/40dd6a0a-efe5-441f-94e8-eb622fd21042
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+{
+    "nome": "Cd Caxias 2",
+    "endereco":"Juninho da Cunha",
+    "responsavel":"Benjamin",
+    "telefone":"51-999354299"
+}
+
+### Deletar Pontos de Entrega
+DELETE http://localhost:8000/pontos-de-entrega/40dd6a0a-efe5-441f-94e8-eb622fd21042
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+## CD
+### Cadastrar CD
+POST http://localhost:8000/cds/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+{
+    "descricao": "CD Caxias",
+    "endereco":"R das Flores 455, Caxias",
+    "nome":"CD Caxias",
+    "capacidade_armazenamento":"1000"
+}
+
+### Listar CD
+GET http://localhost:8000/cds/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+### Buscar CD por ID
+GET http://localhost:8000/cds/c8e2d6f3-3dbc-40fc-9ab4-aa0c1ceb8dbc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+### Atualizar CD
+PUT http://localhost:8000/cds/c8e2d6f3-3dbc-40fc-9ab4-aa0c1ceb8dbc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+    
+{
+    "descricao": "CD Caxias 2",
+    "endereco":"R das Flores 455, Caxias",
+    "nome":"CD Caxias",
+    "capacidade_armazenamento":"1000"
+}
+
+### Deletar CD
+DELETE http://localhost:8000/cds/c8e2d6f3-3dbc-40fc-9ab4-aa0c1ceb8dbc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU3NDI0MzMsImV4cCI6MTcxNTgyODgzM30.-h6-NbeJnogJ2C9IUdlq4NFUJfeiLP_l_-sFnRrr8Sg
+
+## Estoque
+### Cadastrar Item no Estoque
+POST http://localhost:8000/estoques/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoiNzMyMzNlZmYtZWIyNS00YmU0LWE0MmYtNjg3MjNkZWU2MDM3IiwiZW1haWwiOiJiZW5qYW1pbkBkb3Jhay5jb20uYnIiLCJpYXQiOjE3MTU5OTY1MTUsImV4cCI6MTcxNjA4MjkxNX0.krnVpaSCDQCUe0soAjNPxs5-_cuhCCWh1GkS5BR6hYo
+
+{
+    "id_item":"d9d2ac6f-7b67-4884-8e6e-afc0a97d4710",
+    "id_origem":"e98aecb6-1637-4563-80e3-ba794fa6e8f1",
+    "id_estoque": "951a56ce-f930-4a3e-b291-ed0894640164",
+    "id_localizacao": "7acf961e-8571-40b7-94d4-50a53474c15b",
+    "quantidade":100,
+    "tipo_operacao":"S",
+    "validade": "2024-12-07 00:00:00.000 -0300"
+}

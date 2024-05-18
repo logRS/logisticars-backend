@@ -1,4 +1,4 @@
-import { Joi, Segments, celebrate } from "celebrate";
+import { Joi, Segments, celebrate } from 'celebrate';
 
 export default {
   getById: celebrate({
@@ -7,7 +7,7 @@ export default {
     }),
   }),
 
-  addNew: celebrate({
+  create: celebrate({
     [Segments.BODY]: Joi.object().keys({
       nome: Joi.string().max(250).required(),
     }),

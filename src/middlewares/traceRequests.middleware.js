@@ -1,6 +1,6 @@
-import fastuuid from "../utils/fastuuid.js";
+import fastuuid from '../utils/fastuuid.js';
 
-export default (_req, res , next) => {
+export default (_req, res, next) => {
   res.id_request = fastuuid();
   next();
-}
+};
